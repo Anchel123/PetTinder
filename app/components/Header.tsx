@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import { useRouter , usePathname} from 'next/navigation';
 
 
@@ -32,6 +33,7 @@ export default function Header() {
             </div>
             <div className="flex items-center gap-4 ">
                 <button onClick={scrollTo}>Login</button>
+                
             </div>
         </header>
     )
