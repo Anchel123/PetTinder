@@ -7,18 +7,19 @@ export default function LandingPage() {
             <section>
                 <HomePage />
             </section>
+            <div className="w-full">
+                <section>
+                    Info
+                </section>
 
-            <section>
-                Info
-            </section>
+                <section>
+                    ABpout
+                </section>
 
-            <section>
-                ABpout
-            </section>
-
-            <section id="Login">
-                <Login />
-            </section>
+                <section id="Login">
+                    <Login />
+                </section>
+            </div>
         </div>
     )
 } 
