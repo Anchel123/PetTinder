@@ -19,7 +19,7 @@
   --accent-foreground: 222.2 47.4% 11.2%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
-  --border: black;
+  --border: 0 0% 0%;
   --input: 214.3 31.8% 91.4%;
   --ring: 222.2 84% 4.9%;
   --radius: 0.5rem;
@@ -31,7 +31,7 @@
 }
 
 .dark {
-  --background: 222.2 84% 4.9%;       
+  --background: 222.2 84% 4.9%;
   --foreground: 210 40% 98%;
   --card: 222.2 84% 4.9%;
   --card-foreground: 210 40% 98%;
@@ -61,6 +61,10 @@ body {
   @apply bg-background text-foreground;
 }
 
+.Page {
+  @apply h-1 grow;
+}
+
 .HomePage {
 
   @apply flex flex-col gap-12;
@@ -69,19 +73,21 @@ body {
     @apply text-3xl font-bold;
   }
 
-  div{
-    @apply  flex flex-col gap-12;
-  
+  div {
+    @apply flex flex-col gap-12;
+
   }
 }
 
-.Header a:hover {
-  transform: scale(1.1);
-  font-weight: bold;
+.Header {
+  a:hover {
+    @apply scale-110 font-bold
+  }
 }
 
 .LandingPage {
   @apply h-full w-full flex flex-col items-center gap-96 px-[30%] py-20 overflow-auto;
+
   section {
     @apply w-full;
   }
@@ -89,12 +95,15 @@ body {
 
 .Login {
   @apply w-full relative flex flex-col gap-12 p-12 border-2 shadow-xl rounded-lg;
+
   input {
     @apply border border-border rounded-lg p-2;
   }
+
   input:hover {
     @apply border-2 scale-105;
   }
+
   input:focus {
     @apply border-2 scale-105;
   }
