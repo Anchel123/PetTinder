@@ -8,13 +8,13 @@ export default function LandingPage() {
                 <Hero />
             </section>
 
-            <section className="pl-80">
+            <section className="pl-80 text-xl">
                 <p className="flex flex-col gap-8 justify-end font-bold test-lg  ">
                     <span>We are here to help you find the Perfect Pet for you, and the perfect owner for the Pet.</span>
                     <span>Want to adopt a Cat, Dog, Bird?</span>
                     <span>Want to hand over an animal for adoption?</span>
                     <span>
-                        This is the place for you to do it in the most professional and reliable way, &nbsp; So.. Ready to join the family?
+                        This is the place for you to do it in the most professional and reliable way, &nbsp; &So.. Ready to join the family?
                     </span>
                 </p>
             </section>
