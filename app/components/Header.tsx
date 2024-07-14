@@ -13,7 +13,7 @@ export default function Header() {
 
         if(pathname !== "/"){
             router.push("/");
-            await new Promise(r => pathname !== "/" && setTimeout(r, 100));
+            await new Promise(r => pathname !== "/" && setTimeout(r, 150));
         }
         
 
