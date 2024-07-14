@@ -58,19 +58,24 @@
 }
 
 body {
-  @apply bg-background text-foreground;
+  @apply bg-[url(/dogs/backGround.png)] bg-contain text-foreground;
 }
 
 .Page {
   @apply h-1 grow;
 }
 
-.HomePage {
 
-  @apply flex flex-col gap-12;
+.Hero {
+
+  @apply flex flex-col items-end;
 
   h1 {
-    @apply text-3xl font-bold;
+    @apply text-6xl font-bold;
+  }
+
+  span {
+    @apply text-[#965f2cf0] tracking-wide text-6xl font-bold ;
   }
 
   div {
@@ -96,6 +101,11 @@ body {
 .Login {
   @apply w-full relative flex flex-col gap-12 p-12 border-2 shadow-xl rounded-lg;
 
+  @apply h-full w-full flex flex-col items-center gap-y-96  py-72 overflow-auto;
+}
+
+.Login {
+  @apply w-full bg-white  relative flex flex-col  gap-12 p-12 border-2 shadow-xl rounded-lg;
   input {
     @apply border border-border rounded-lg p-2;
   }
