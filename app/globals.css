@@ -68,7 +68,7 @@ body {
 
 .Hero {
 
-  @apply flex flex-col items-end;
+  @apply flex  pt-20;
 
   h1 {
     @apply text-6xl font-bold;
@@ -76,11 +76,6 @@ body {
 
   span {
     @apply text-[#965f2cf0] tracking-wide text-6xl font-bold ;
-  }
-
-  div {
-    @apply flex flex-col gap-12;
-
   }
 }
 
