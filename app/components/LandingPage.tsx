@@ -26,8 +26,6 @@ export default function LandingPage() {
     return (
 
         <div className="LandingPage">
-
-
             <Tabs className="flex justify-center items-center h-full grow" value={section[counter]}>
                 <TabsContent value="landing">
                     <section>
@@ -63,9 +61,7 @@ export default function LandingPage() {
 
             <div className="w-40">
                 <button className="border border-black p-6 rounded hover:scale-110" onClick={() => setCounter((counter + 1) % section.length)} ><ChevronRight /></button>
-            </div>
-
-
+            </div> 
 
         </div>
     );
