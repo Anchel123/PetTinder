@@ -16,6 +16,8 @@ export default function Page() {
     const [collapsed, setCollapsed] = useState(false);
     const [currentTab, setCurrentTab] = useState('Profile')
 
+    
+
     return (
         <ResizablePanelGroup direction='horizontal'>
             <ResizablePanel
