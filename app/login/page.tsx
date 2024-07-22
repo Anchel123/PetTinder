@@ -19,7 +19,7 @@ export default function Login() {
     return (
         <form className="Login" onSubmit={handelSubmit}>
             <p className="text-4xl py-5">Login</p>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col w-full gap-2 items-center">
                 <input
                     className={cn(email && "!border-2 scale-105")}
                     type="email"
@@ -29,7 +29,7 @@ export default function Login() {
                     required
                 />
             </div>
-            <div className="relative flex flex-col gap-2">
+            <div className="relative flex w-full flex-col gap-2 items-center">
 
                 {password !== "" &&
                     <button
@@ -54,8 +54,8 @@ export default function Login() {
                     required
                 />
             </div>
-            <div className="flex flex-col gap-6 items-center">
-                <button type="submit" className="border border-black rounded hover:shadow-xl hover:border-2 hover:scale-105 p-4 w-2/3 ">
+            <div className="flex flex-col gap-6 w-full items-center">
+                <button type="submit" className="border w-1/3 border-black rounded hover:shadow-xl hover:border-2 hover:scale-105 p-4 w-2/3 ">
                     <p>Connect</p>
                 </button>
                 <button type="button" className="underline underline-offset-2">

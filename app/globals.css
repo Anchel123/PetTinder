@@ -19,7 +19,7 @@
   --accent-foreground: 222.2 47.4% 11.2%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
-  --border: black;
+  --border: 0 0% 0%;
   --input: 214.3 31.8% 91.4%;
   --ring: 222.2 84% 4.9%;
   --radius: 0.5rem;
@@ -31,7 +31,7 @@
 }
 
 .dark {
-  --background: 222.2 84% 4.9%;       
+  --background: 222.2 84% 4.9%;
   --foreground: 210 40% 98%;
   --card: 222.2 84% 4.9%;
   --card-foreground: 210 40% 98%;
@@ -58,45 +58,55 @@
 }
 
 body {
-  @apply bg-[url(/dogs/backGround.png)] bg-contain text-foreground;
+  @apply bg-white ;
+  /* @apply bg-white bg-[url(/dogs/backGround.png)] bg-contain text-foreground; */
+}   
+
+.Page {
+  @apply h-1 grow;
 }
 
 
-.Hero {
 
-  @apply flex flex-col items-end;
+.Header {
+  a:hover {
+    @apply scale-110 font-bold
+  }
+}
+
+.HoverBoldButton {
+  @apply border-[3px]  rounded-lg font-extrabold border-black px-20 py-3 transform transition-transform duration-300 hover:scale-125;
+}
+
+.LandingPage {
+
+  @apply flex  w-full h-full p-12 items-center  ;
 
   h1 {
     @apply text-6xl font-bold;
   }
-
+  
   span {
     @apply text-[#965f2cf0] tracking-wide text-6xl font-bold ;
   }
 
-  div{
-    @apply  flex flex-col gap-12;
-  
-  }
 }
 
-.Header a:hover {
-  transform: scale(1.1);
-  font-weight: bold;
-}
-
-.LandingPage {
-  @apply h-full w-full flex flex-col items-center gap-y-96  py-72 overflow-auto;
-}
 
 .Login {
-  @apply w-full bg-white  relative flex flex-col  gap-12 p-12 border-2 shadow-xl rounded-lg;
+
+
+  @apply w-full h-full flex flex-col  gap-12 bg-white  items-center p-12 border-2 shadow-xl rounded-lg;
+
   input {
-    @apply border border-border rounded-lg p-2;
+    @apply border border-border w-1/3 rounded-lg p-2;
   }
+
+ 
   input:hover {
     @apply border-2 scale-105;
   }
+
   input:focus {
     @apply border-2 scale-105;
   }
