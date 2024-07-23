@@ -5,6 +5,7 @@ import "./globals.css";
 import { cn } from "./utils/utils";
 import Header from "./components/Header";
 import { usePathname } from "next/navigation";
+import path from "path";
 
 const inter = Inter({ subsets: ["latin"] });
  
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("h-screen w-screen flex flex-col", inter.className)}>
-        {pathname !=="/" && <Header />}
+        {pathname !== "/" && pathname !== "/login" && <Header /> }
         {children}
       </body>
     </html>

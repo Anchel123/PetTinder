@@ -5,7 +5,7 @@ import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { cn } from "../utils/utils";
 
-export default function Login() {
+export default function Page() {
 
     const [hover, setHover] = useState<boolean>(false)
     const [email, setEmail] = useState<string>("")
@@ -55,7 +55,7 @@ export default function Login() {
                 />
             </div>
             <div className="flex flex-col gap-6 w-full items-center">
-                <button type="submit" className="border w-1/3 border-black rounded hover:shadow-xl hover:border-2 hover:scale-105 p-4 w-2/3 ">
+                <button type="submit" className="border w-1/3 border-black rounded hover:shadow-xl hover:border-2 hover:scale-105 p-4">
                     <p>Connect</p>
                 </button>
                 <button type="button" className="underline underline-offset-2">
