@@ -2,30 +2,30 @@
 
 import Image from "next/image";
 import { use, useEffect, useState } from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { INSIDE_LANDING_PAGE } from "../utils/utils";
 import { useRouter } from "next/navigation";
 
 export default function LandingPage() {
 
-
     const router = useRouter();
     const [counter, setCounter] = useState(0);
     const section = ["landing", "about", "login"];
 
-    function login() {  
+    function login() {
         router.push("login")
-    }  
-    
-    function signUp() {  
-        router.push("login")
-    }  
+    }
 
+    function signUp() {
+        router.push("login")
+    }
 
     return (
-
         <div className="LandingPage">
+            <div className="flex w-32 justify-end">
+                <button className="border border-black p-6 rounded hover:scale-110" onClick={() => counter !== 0 && setCounter((counter - 1) % section.length)} ><ChevronLeft /></button>
+            </div>
             <Tabs className="flex justify-center items-center h-full grow" value={section[counter]}>
                 <TabsContent value="landing">
                     <section>
@@ -46,23 +46,18 @@ export default function LandingPage() {
                 </TabsContent>
                 <TabsContent value="login">
                     <section className="flex flex-col  gap-20 justify-center items-center">
-
                         <span className="text-8xl">Sooooo......</span>
                         <p className="text-5xl font-bold" > &nbsp; Ready to join the family?</p>
-
                         <div className="flex gap-8">
                             <button onClick={login} className="HoverBoldButton">Login</button>
                             <button onClick={signUp} className="HoverBoldButton">Sign Up</button>
                         </div>
-
                     </section>
                 </TabsContent>
             </Tabs>
-
-            <div className="w-40">
+            <div className="w-32">
                 <button className="border border-black p-6 rounded hover:scale-110" onClick={() => setCounter((counter + 1) % section.length)} ><ChevronRight /></button>
-            </div> 
-
+            </div>
         </div>
     );
 }
