@@ -1,7 +1,11 @@
+'use client'
+
+import PetRoller from "./PetRoller";
+
 export default function Page() {
     return (
-        <div>
-            <h1>Profile</h1>
+        <div className="Page h-1 grow">
+            <PetRoller/>
         </div>
-    );
+    )
 }
