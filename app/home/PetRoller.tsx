@@ -3,6 +3,7 @@
 import { useState } from "react";
 import PetCard from "./PetCard";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function PetRoller() {
 
@@ -24,22 +25,27 @@ export default function PetRoller() {
             sex: 'female',
         },
     ])
-    const [currentPetId, setCurrentPetId] = useState<string>(pets[0].id.toString())
+
+    const [counter, setCounter] = useState(0);
+
+    const [currentPetId, setCurrentPetId] = useState(pets[0].id);
 
     return (
-            <Tabs className="h-full flex items-center justify-center" value={currentPetId}>
-                {
-                    pets.map((pet) => {
-                        return (
-                            <TabsContent key={pet.id} value={pet.id.toString()}>
-                                <PetCard
-                                    pet={pet}
-                                />
-                            </TabsContent>
-                        )
-                    }
+        <Tabs className="h-full flex items-center justify-center" value={currentPetId}>
+            <button className="border border-black p-6 rounded hover:scale-110" onClick={() => currentPetId !== 0 && setCurrentPetId((currentPetId - 1) % pets.length)} ><ChevronLeft /></button>
+            {
+                pets.map((pet) => {
+                    return (
+                        <TabsContent key={pet.id} value={pet.id}>
+                            <PetCard
+                                pet={pet}
+                            />
+                        </TabsContent>
                     )
                 }
-            </Tabs>
+                )
+            }
+            <button className="border border-black p-6 rounded hover:scale-110" onClick={() => setCurrentPetId((currentPetId + 1) % pets.length)} ><ChevronRight /></button>
+        </Tabs>
     )
 }

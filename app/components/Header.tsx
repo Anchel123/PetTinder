@@ -11,14 +11,16 @@ export default function Header() {
 
     async function scrollTo() {
 
-        if(pathname !== "/"){
-            router.push("/");
-            await new Promise(r => pathname !== "/" && setTimeout(r, 150));
-        }
+
+        router.push("/login");
+        // if(pathname !== "/"){
+        //     router.push("/");
+        //     await new Promise(r => pathname !== "/" && setTimeout(r, 150));
+        // }
         
 
-        let element = document.getElementById("Login");
-        element?.scrollIntoView({ behavior: "smooth" });
+        // let element = document.getElementById("Login");
+        // element?.scrollIntoView({ behavior: "smooth" });
 
     }
 
@@ -29,7 +31,7 @@ export default function Header() {
                 <a href="/home">Home</a>
                 <a href="/profile">Profile</a>
                 <a href="/about">About</a>
-                <a href="/contact-us">Contact Us</a>
+                <a href="/contact">Contact Us</a>
             </div>
             <div className="flex items-center gap-4 ">
                 <button onClick={scrollTo}>Login</button>
