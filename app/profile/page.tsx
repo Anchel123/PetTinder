@@ -14,11 +14,12 @@ const links = [
 export default function Page() {
 
     const [collapsed, setCollapsed] = useState(false);
-    const [currentTab, setCurrentTab] = useState('Profile')
+    const [currentTab, setCurrentTab] = useState('ProfileDetails')
 
-    
+
 
     return (
+
         <ResizablePanelGroup direction='horizontal'>
             <ResizablePanel
                 defaultSize={15}
@@ -33,9 +34,17 @@ export default function Page() {
                         className='text-start underline underline-offset-2'
                         title='Profile'
                         type='button'
-                        onClick={() => setCurrentTab('Profile')}
+                        onClick={() => setCurrentTab('ProfileDetails')}
                     >
-                        <p>Profile</p>
+                        <p>Profile Details</p>
+                    </button>
+                    <button
+                        className='text-start underline underline-offset-2'
+                        title='Taste Profile'
+                        type='button'
+                        onClick={() => setCurrentTab('TasteProfile')}
+                    >
+                        <p>Taste Profile</p>
                     </button>
                     <button
                         className='text-start underline underline-offset-2'
@@ -45,17 +54,32 @@ export default function Page() {
                     >
                         <p>My Pets</p>
                     </button>
+                    <button
+                        className='text-start underline underline-offset-2'
+                        title='Liked Pets'
+                        type='button'
+                        onClick={() => setCurrentTab('LikedPets')}
+                    >
+                        <p>Liked Pets</p>
+                    </button>
                 </div>
             </ResizablePanel>
-            <ResizableHandle withHandle/>
+
+            <ResizableHandle withHandle />
             <ResizablePanel
                 defaultSize={70}
                 minSize={50}
                 maxSize={100}
             >
                 <Tabs value={currentTab}>
-                    <TabsContent value='Profile'>
-                        <h1>Profile</h1>
+                    <TabsContent value='ProfileDetails'>
+                        <h1>Profile Details</h1>
+                    </TabsContent>
+                    <TabsContent value='LikedPets'>
+                        <h1>Liked Pets</h1>
+                    </TabsContent>
+                    <TabsContent value='TasteProfile'>
+                        <h1>Taste Profile</h1>
                     </TabsContent>
                     <TabsContent value='MyPets'>
                         <h1>My Pets</h1>
@@ -63,5 +87,6 @@ export default function Page() {
                 </Tabs>
             </ResizablePanel>
         </ResizablePanelGroup>
+
     );
 };

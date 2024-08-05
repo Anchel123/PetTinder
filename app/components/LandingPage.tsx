@@ -14,11 +14,13 @@ export default function LandingPage() {
     const section = ["landing", "about", "login"];
 
     function login() {
-        router.push("login")
+
+        // TODO: Change to "/login"
+        router.push("/home")
     }
 
     function signUp() {
-        router.push("login")
+        router.push("/login")
     }
 
     return (
